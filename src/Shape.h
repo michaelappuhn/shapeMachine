@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef ____ShapeBox__
-#define ____ShapeBox__
+#ifndef ____Shape__
+#define ____Shape__
 
 #include <stdio.h>
 #include <string>
@@ -38,6 +38,7 @@ public:
     
 };
 
+// A Right Triangle
 class RightTriangle : public Shape
 {
 public:
@@ -46,6 +47,7 @@ public:
     void draw();
 };
 
+// A Circle!
 class Circle : public Shape
 {
 public:
@@ -53,6 +55,7 @@ public:
     void draw (float r);
 };
 
+// An Isoceles Triangle
 class IsoTriangle : public Shape
 {
 public:
@@ -61,4 +64,4 @@ public:
 };
 
 
-#endif /* defined(____ShapeBox__) */
+#endif /* defined(____Shape__) */

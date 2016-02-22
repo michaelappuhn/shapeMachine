@@ -24,7 +24,8 @@ class Board {
     // Variables to set all Shapes' width and height — cascades to Shape
     int shapeWidth, shapeHeight;
     
-    // This is for creating horizontal patterns in the loop
+    // This is for creating alternating patterns in the loop
+    // e.g. A Circle, then an IsoTriange
     int patternLength1, patternLength2;
     
     
@@ -34,6 +35,7 @@ public:
     Board(float w, float h);
     ~Board();
     
+    // Get the number of Shapes that fit on one Board given the current settings.
     int getShapesInWidth();
     int getShapesInHeight();
     
@@ -44,4 +46,4 @@ public:
 };
 
 
-#endif /* defined(____WindowBoard__) */
+#endif /* defined(____Board__) */

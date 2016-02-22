@@ -62,21 +62,22 @@ void RightTriangle::draw ()
 {
 
     // Change the angle of the right triangle based on input
+    // Refactor this to describe the hypotenuse with an enumeration using compas direcitons
     switch (this->angle)
     {
-        case (1):
+        case (1): // Southeast Hypotenuse
             ofTriangle( this->bottomLeft.x, this->bottomLeft.y, this->topLeft.x, this->topLeft.y, this->topRight.x, this->topRight.y );
             break;
             
-        case (2):
+        case (2): // Southwest Hypotenuse
             ofTriangle( this->topLeft.x, this->topLeft.y, this->bottomRight.x, this->bottomRight.y, this->topRight.x, this->topRight.y );
             break;
             
-        case (3):
+        case (3): // Northwest Hypotenuse
             ofTriangle( this->topRight.x, this->topRight.y, this->bottomRight.x, this->bottomRight.y, this->bottomLeft.x, this->bottomLeft.y );
             break;
 
-        case (4):
+        case (4): //
             ofTriangle( this->bottomRight.x, this->bottomRight.y, this->bottomLeft.x, this->bottomLeft.y, this->topLeft.x, this->topLeft.y );
             break;
             

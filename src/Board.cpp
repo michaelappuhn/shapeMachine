@@ -48,13 +48,19 @@ int Board::getShapesInHeight(){
 
 void Board::drawShapesOntoBoard()
 {
-    
+    //Loop through the x values…
     for (int x = 0; x < this->getShapesInWidth(); x++)
     {
-        //
+        //Loop through the y values and add shapes…
+        // wait; shouldn't this be the other way around?
+        // I should replace this with a "drawShapeRow()" function
         for (int y = 0; y < this->getShapesInHeight(); y++)
         {
+
+            // Create a new right triangle based on the x,y coordinates
+            // Will replace with a Shape drawShapeAtCoordinates()
             Shape * s = new RightTriangle( x * shapeHeight, y * this->shapeHeight, this->shapeWidth, 1);
+
             // Shape * s = new IsoTriangle( x * shapeHeight, y * this->shapeHeight, this->shapeWidth, 1);
             s->draw();
             
@@ -64,6 +70,8 @@ void Board::drawShapesOntoBoard()
 }
 
 
+// Set the pattern of the shapes on the board to a series of Shapes.
+// This doesn't make sense yet, needs renaming / refactoring
 void Board::setPattern(int p1, int p2)
 {
     this->patternLength1 = p1;
