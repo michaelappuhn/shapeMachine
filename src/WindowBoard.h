@@ -5,7 +5,7 @@
 #define ____WindowBoard__
 
 #include <stdio.h>
-#include "ShapeBox.h"
+#include "Shape.h"
 #include "ofPoint.h"
 
 
