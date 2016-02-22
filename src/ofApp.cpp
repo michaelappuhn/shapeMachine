@@ -1,6 +1,6 @@
 #include "ofApp.h"
 #include "Shape.h"
-#include "WindowBoard.h"
+//#include "Board.h"
 #include "iostream"
 
 //--------------------------------------------------------------

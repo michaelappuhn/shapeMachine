@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "WindowBoard.h"
+#include "Board.h"
 #include "ofxMidi.h"
 
 class ofApp : public ofBaseApp{

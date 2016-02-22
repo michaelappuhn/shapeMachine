@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0BFC9C20FD7E3C8D5873AA97 /* ofxMidiIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DD359247F3ED1550D8BB5C9 /* ofxMidiIn.cpp */; };
-		0C0124541BDC752A006CCCFB /* WindowBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0124521BDC752A006CCCFB /* WindowBoard.cpp */; };
 		0C06B3C41BDDA3B300CB9336 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AC32CCCB56FAABA3E1BDE0 /* CoreMIDI.framework */; };
 		0C6C33071C7ABE8200F44686 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C33051C7ABE8100F44686 /* Shape.cpp */; };
+		0C6C330A1C7AC0D500F44686 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C33081C7AC0D500F44686 /* Board.cpp */; };
 		1A86B7721CAEBC6F1C572C45 /* ofxBaseMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94B3C3C21F92F9310CA90986 /* ofxBaseMidi.cpp */; };
 		1B5F996886A777589D5DD794 /* svgtiny_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 077F7AC989DAB289A1EC643F /* svgtiny_list.cpp */; };
 		1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 907C5B5E104864A2D3A25745 /* ofxToggle.cpp */; };
@@ -93,6 +93,8 @@
 		0C0124531BDC752A006CCCFB /* WindowBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowBoard.h; sourceTree = "<group>"; };
 		0C6C33051C7ABE8100F44686 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
 		0C6C33061C7ABE8100F44686 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		0C6C33081C7AC0D500F44686 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		0C6C33091C7AC0D500F44686 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		11D7A477920A2054FD49C2D2 /* CreEPS_Types.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CreEPS_Types.hpp; path = ../../../addons/ofxVectorGraphics/libs/CreEPS_Types.hpp; sourceTree = SOURCE_ROOT; };
 		15F2C6477A769C03A56D1401 /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSlider.cpp; path = ../../../addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
 		17E65988300FBD9AAA2CD0CA /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
@@ -420,6 +422,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0C6C33081C7AC0D500F44686 /* Board.cpp */,
+				0C6C33091C7AC0D500F44686 /* Board.h */,
 				0C6C33051C7ABE8100F44686 /* Shape.cpp */,
 				0C6C33061C7ABE8100F44686 /* Shape.h */,
 				0C0124521BDC752A006CCCFB /* WindowBoard.cpp */,
@@ -539,7 +543,6 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
-				0C0124541BDC752A006CCCFB /* WindowBoard.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
@@ -550,6 +553,7 @@
 				B88A57B4B0BA6191EF3571E9 /* ofxSvg.cpp in Sources */,
 				6A565A9714A6A12EB9098F52 /* src_colors.cpp in Sources */,
 				1D6B78EF041B097CE4F423C4 /* svgtiny.cpp in Sources */,
+				0C6C330A1C7AC0D500F44686 /* Board.cpp in Sources */,
 				4294163B15857489B2176769 /* svgtiny_gradient.cpp in Sources */,
 				0C6C33071C7ABE8200F44686 /* Shape.cpp in Sources */,
 				1B5F996886A777589D5DD794 /* svgtiny_list.cpp in Sources */,
