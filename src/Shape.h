@@ -23,7 +23,7 @@ private:
 
 
 public:
-    ofVec2f topLeft, topRight, bottomLeft, bottomRight, center, topCenter, bottomCenter, leftCenter, rightCenter;
+    ofVec2f topLeft;
     
     
     // Here I could make a secondary constructor if the size is a non-square, this constructor

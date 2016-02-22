@@ -18,35 +18,7 @@ Shape::Shape(){}
 Shape::Shape( float tlx, float tly, float sz) : topLeft(tlx, tly), size(sz)
 {
     ofSetColor(255,255,255, 80);    // white, transparent, for testing
-    
-    topRight.x = topLeft.x + this->getWidth(); // x value is the x value of topleft plus its width.
-    topRight.y = topLeft.y;
-    
-    bottomLeft.x = topLeft.x;
-    bottomLeft.y = topLeft.y + this->getHeight() ;
-    // y value is y plus the height of the box
-    
-    bottomRight.x = topRight.x ;
-    bottomRight.y = bottomLeft.y ;
-    
-    center.x = (topLeft.x + topRight.x) / 2 ;
-    center.y = (topLeft.y + bottomLeft.y) / 2 ;
-    
-    topCenter.x = center.x ;
-    topCenter.y = topRight.x;
-    
-    leftCenter.x = topLeft.x;
-    leftCenter.y = center.y;
-    
-    rightCenter.x = topRight.x;
-    rightCenter.y = center.y;
-    
-
-    bottomCenter.x = center.x ;
-    bottomCenter.y = bottomLeft.y;
-    
-    
-
+   
 }
 
 
@@ -185,7 +157,10 @@ IsoTriangle::IsoTriangle(float tlx, float tly, float sz) : Shape(tlx, tly, sz)
 void IsoTriangle::draw()
 {
     // Currently this way for testing
-    ofTriangle( this->getGridBottomLeftX(), this->getGridTopLeftY(), this->topCenter.x, this->topCenter.y, this->getGridBottomRightX(), this->getGridBottomRightY() );
+    ofTriangle( this->getGridBottomLeftX(), this->getGridTopLeftY(),
+               this->getGridTopCenterX(), this->getGridTopCenterY(),
+               this->getGridBottomRightX(), this->getGridBottomRightY()
+   );
     
 }
 
