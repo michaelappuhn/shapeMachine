@@ -1,10 +1,5 @@
-//
 //  WindowBoard.h
-//  
-//
 //  Created by Michael on 10/24/15.
-//
-//
 
 #ifndef ____WindowBoard__
 #define ____WindowBoard__
@@ -20,15 +15,27 @@
 // using the shape's width and height to determine that.
 
 class Board {
+    // A board is the container for a series of Shapes
     Shape * s;
+    
+    // Variables to determine the number of Shapes on the Board
     int shapesInWidth, shapesInHeight;
+    
+    // Variables to set all Shapes' width and height — cascades to Shape
     int shapeWidth, shapeHeight;
-    int patternLength1, patternLength2; // This is for creating horizontal patterns in the loop
+    
+    // This is for creating horizontal patterns in the loop
+    int patternLength1, patternLength2;
+    
+    
     int patternSwitch; // This is to switch between patterns
 public:
     Board();
     Board(float w, float h);
     ~Board();
+    
+    int getShapesInWidth();
+    int getShapesInHeight();
     
     void settings(float shapeWidth, float shapeHeight);
     void drawShapesOntoBoard();

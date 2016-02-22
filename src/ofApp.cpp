@@ -59,13 +59,18 @@ void ofApp::keyPressed(int key){
 
     switch(key)
     {
+        // List the open midi ports for testing
         case 'l':
             midiIn.listPorts();
             break;
+
+        // Alter the coordinates of Board 'b' on spacebar
         case ' ':
             b.settings(200, 200);
             std::cout << "wahoooo" << endl;
             break;
+            
+        // On typing the letter 'b', the color of the Shapes will turn to red
         case 'b':
              ofSetColor(255,0,0);    // red
             break;
