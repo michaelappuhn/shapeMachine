@@ -29,8 +29,19 @@ float Shape::getWidth() { return this->size; }
 
 /* ------------------------------------------------
 Shape GridCoordinate Getters
-------------------------------------------------*/
+All of these are functions to get the x/y coordinates
+ of a grid space like the one below:
+ 
+ +---+---+
+ |   |   |
+ +---+---+
+ |   |   |
+ +---+---+
+ 
+ From here, we can make shapes :-)
+ ------------------------------------------------*/
 
+// TOP LEFT
 float Shape::getGridTopLeftX(){
     return this->getGridTopLeftX();
 }
@@ -38,6 +49,7 @@ float Shape::getGridTopLeftY(){
     return this->getGridTopLeftY();
 }
 
+// TOP RIGHT
 float Shape::getGridTopRightX(){
     // x value is the x value of topleft plus its width.
     return this->getGridTopLeftX() + this->getWidth();
@@ -46,6 +58,7 @@ float Shape::getGridTopRightY(){
     return this->getGridTopLeftY();
 }
 
+// BOTTOM LEFT
 float Shape::getGridBottomLeftX(){
     return this->getGridTopLeftX();
 }
@@ -54,6 +67,7 @@ float Shape::getGridBottomLeftY(){
     return this->getGridTopLeftY() + this->getHeight() ;
 }
 
+// BOTTOM RIGHT
 float Shape::getGridBottomRightX(){
     // Top left corner x value (starting point) plus the width
     return this->getGridTopLeftX() + this->getWidth();
@@ -63,10 +77,7 @@ float Shape::getGridBottomRightY(){
     return this->getGridTopLeftY() + this->getHeight();
 }
 
-/* ------------------------
-     Set the center points
- --------------------------- */
-
+// CENTER CENTER
 float Shape::getGridCenterX(){
     // Center of the value is half the width value plus the starting point
     return this->getGridTopLeftX() + ( this->getWidth() / 2) ;
@@ -76,6 +87,7 @@ float Shape::getGridCenterY(){
     return this->getGridTopLeftY() + ( this->getHeight() / 2 );
 }
 
+// TOP CENTER
 float Shape::getGridTopCenterX(){
     // This value is in the center
     return this->getGridCenterX();
@@ -85,6 +97,7 @@ float Shape::getGridTopCenterY(){
     return this->getGridTopLeftY();
 }
 
+// BOTTOM CENTER
 float Shape::getGridBottomCenterX(){
     // X value is the center point of the grid
     return this->getGridCenterX();
@@ -95,6 +108,7 @@ float Shape::getGridBottomCenterY(){
     return this->getGridBottomLeftY();
 }
 
+// LEFT CENTER
 float Shape::getGridLeftCenterX(){
     // This value is all the way to the left
     return this->getGridTopLeftX();
@@ -104,6 +118,7 @@ float Shape::getGridLeftCenterY(){
     return this->getGridCenterY();
 }
 
+// RIGHT CENTER
 float Shape::getGridRightCenterX(){
     // This value is all the way to the right
     return this->getGridTopRightX();
