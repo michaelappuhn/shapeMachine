@@ -32,11 +32,13 @@ Shape GridCoordinate Getters
 All of these are functions to get the x/y coordinates
  of a grid space like the one below:
  
- +---+---+
- |   |   |
- +---+---+
- |   |   |
- +---+---+
+ TopLeft ->  +---+---+  <-- e.g. TopRight!
+             |   |   |
+             +---+---+
+             |   |   |
+             +---+---+  <-- e.g. BottomRight!
+                 ^
+                 BottomCenter!
  
  From here, we can make shapes :-)
  ------------------------------------------------*/
