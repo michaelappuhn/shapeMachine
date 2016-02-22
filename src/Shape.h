@@ -21,6 +21,7 @@ class Shape
 private:
     float size;
 
+
 public:
     ofVec2f topLeft, topRight, bottomLeft, bottomRight, center, topCenter, bottomCenter, leftCenter, rightCenter;
     
@@ -31,10 +32,38 @@ public:
     Shape();
     Shape(float tlx, float tly, float sz);
     
-    float width();
-    float height();
+    float getWidth();
+    float getHeight();
     
-    virtual void draw() =0;
+    
+    float getGridTopLeftX();
+    float getGridTopLeftY();
+
+    float getGridTopRightX();
+    float getGridTopRightY();
+    
+    float getGridBottomLeftX();
+    float getGridBottomLeftY();
+    
+    float getGridBottomRightX();
+    float getGridBottomRightY();
+
+    float getGridCenterX();
+    float getGridCenterY();
+    
+    float getGridTopCenterX();
+    float getGridTopCenterY();
+    
+    float getGridBottomCenterX();
+    float getGridBottomCenterY();
+    
+    float getGridLeftCenterX();
+    float getGridLeftCenterY();
+
+    float getGridRightCenterX();
+    float getGridRightCenterY();
+    
+    virtual void draw() = 0;
     
 };
 
