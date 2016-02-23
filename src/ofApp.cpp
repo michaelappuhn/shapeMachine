@@ -40,9 +40,11 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    b.drawShapesOntoBoard();
+//    b.drawShapesOntoBoard();
 //    b.drawShapesOntoBoard(Shape x);
 
+    b.drawAllRows();
+    
 }
 
 

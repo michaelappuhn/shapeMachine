@@ -31,7 +31,7 @@ class Board {
     
     void drawRowOfShapes( int yRowInPosition );
     void drawShape( int x, int y );
-    void drawAllRows();
+
     
 public:
     Board();
@@ -49,7 +49,7 @@ public:
     void setPattern(int shapes1, int shapes2);
 
     void drawShapesOntoBoard();
-    
+    void drawAllRows();    
 };
 
 
