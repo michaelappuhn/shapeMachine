@@ -88,6 +88,7 @@ void Board::drawShape(int topLeftX, int topLeftY){
     // This sucks, need to refactor and make more dynamic
     Shape * shape = new RightTriangle( topLeftX * this->shapeHeight, topLeftY * this->shapeHeight, this->shapeWidth, 1);
     shape->draw();
+    delete[] shape;
     
 }
 

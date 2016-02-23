@@ -17,8 +17,9 @@ Shape::Shape(){}
 
 Shape::Shape( float tlx, float tly, float sz) : topLeft(tlx, tly), size(sz)
 {
-    ofSetColor(255,255,255, 80);    // white, transparent, for testing
-   
+    // white, transparent, for testing
+    ofSetColor(255,255,255, 80);
+
 }
 
 

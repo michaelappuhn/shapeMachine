@@ -26,11 +26,13 @@ class Board {
     
     // This is for creating alternating patterns in the loop
     // e.g. A Circle, then an IsoTriange
+    // This Pattern should be a class
+
     int patternLength1, patternLength2;
     int patternSwitch; // This is to switch between patterns
     
-    void drawRowOfShapes( int yRowInPosition );
-    void drawShape( int x, int y );
+    void drawRowOfShapes( int rowNumber );
+    void drawShape( int gridTopLeftX , int gridTopLeftY );
 
     
 public:
