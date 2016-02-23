@@ -21,8 +21,9 @@ Board::Board(float w, float h)
     this->settings(w, h);
 }
 
-Board::~Board(){} // Destructor
-
+Board::~Board(){ // Destructor
+    
+}
 
 void Board::settings(float w, float h)
 {
@@ -47,29 +48,6 @@ int Board::getShapesInHeight(){
     
 }
 
-void Board::drawShapesOntoBoard()
-{
-    //Loop through the x values…
-    for (int x = 0; x < this->getShapesInWidth(); x++)
-    {
-        //Loop through the y values and add shapes
-        // wait; shouldn't this be the other way around?
-        // I should replace this with a "drawShapeRow()" function
-        
-        for (int y = 0; y < this->getShapesInHeight(); y++)
-        {
-            // Create a new right triangle based on the x,y coordinates
-            // Will replace with a Shape drawShapeAtCoordinates()
-            Shape * s = new RightTriangle( x * shapeHeight, y * this->shapeHeight, this->shapeWidth, 1);
-
-            // Shape * s = new IsoTriangle( x * shapeHeight, y * this->shapeHeight, this->shapeWidth, 1);
-            s->draw();
-            
-        }
-        
-    }
-}
-
 void Board::drawAllRows(){
     for (int rowNumber = 0; rowNumber < this->getShapesInHeight(); rowNumber++) {
         this-> drawRowOfShapes( rowNumber);
@@ -78,7 +56,8 @@ void Board::drawAllRows(){
 }
 
 void Board::drawRowOfShapes( int rowNumber ) {
-    // tbh, I should probably do each Row as a class
+    // Breaks down Shape drawing on the board into one horizontal row at a time
+    // starting from the top left corner
     for (int shapeNumberInRow = 0; shapeNumberInRow < this->getShapesInWidth(); shapeNumberInRow++) {
         this->drawShape( shapeNumberInRow, rowNumber );
     }
