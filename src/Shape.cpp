@@ -45,10 +45,10 @@ All of these are functions to get the x/y coordinates
 
 // TOP LEFT
 float Shape::getGridTopLeftX(){
-    return this->getGridTopLeftX();
+    return this->topLeft.x;
 }
 float Shape::getGridTopLeftY(){
-    return this->getGridTopLeftY();
+    return this->topLeft.y;
 }
 
 // TOP RIGHT

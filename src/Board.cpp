@@ -9,6 +9,7 @@
 #include "Board.h"
 #include "ofPoint.h"
 #include "ofAppRunner.h"
+//#include "Row.h" // some day
 
 Board::Board()
 {
@@ -51,12 +52,12 @@ void Board::drawShapesOntoBoard()
     //Loop through the x values…
     for (int x = 0; x < this->getShapesInWidth(); x++)
     {
-        //Loop through the y values and add shapes…
+        //Loop through the y values and add shapes
         // wait; shouldn't this be the other way around?
         // I should replace this with a "drawShapeRow()" function
+        
         for (int y = 0; y < this->getShapesInHeight(); y++)
         {
-
             // Create a new right triangle based on the x,y coordinates
             // Will replace with a Shape drawShapeAtCoordinates()
             Shape * s = new RightTriangle( x * shapeHeight, y * this->shapeHeight, this->shapeWidth, 1);
@@ -69,6 +70,26 @@ void Board::drawShapesOntoBoard()
     }
 }
 
+void Board::drawAllRows(){
+    for (int rowNumber = 0; rowNumber < this->getShapesInHeight(); rowNumber++) {
+        this-> drawRowOfShapes( rowNumber);
+    }
+    
+}
+
+void Board::drawRowOfShapes( int rowNumber ) {
+    // tbh, I should probably do each Row as a class
+    for (int shapeNumberInRow = 0; shapeNumberInRow < this->getShapesInWidth(); shapeNumberInRow++) {
+        this->drawShape( shapeNumberInRow, rowNumber );
+    }
+}
+
+void Board::drawShape(int topLeftX, int topLeftY){
+    // This sucks, need to refactor and make more dynamic
+    Shape * shape = new RightTriangle( topLeftX * this->shapeHeight, topLeftY * this->shapeHeight, this->shapeWidth, 1);
+    shape->draw();
+    
+}
 
 // Set the pattern of the shapes on the board to a series of Shapes.
 // This doesn't make sense yet, needs renaming / refactoring

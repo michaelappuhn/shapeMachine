@@ -27,21 +27,28 @@ class Board {
     // This is for creating alternating patterns in the loop
     // e.g. A Circle, then an IsoTriange
     int patternLength1, patternLength2;
-    
-    
     int patternSwitch; // This is to switch between patterns
+    
+    void drawRowOfShapes( int yRowInPosition );
+    void drawShape( int x, int y );
+    void drawAllRows();
+    
 public:
     Board();
     Board(float w, float h);
     ~Board();
+    
+    float getShapeContainerHeight();
+    float getShapeContainerWidth();
     
     // Get the number of Shapes that fit on one Board given the current settings.
     int getShapesInWidth();
     int getShapesInHeight();
     
     void settings(float shapeWidth, float shapeHeight);
-    void drawShapesOntoBoard();
     void setPattern(int shapes1, int shapes2);
+
+    void drawShapesOntoBoard();
     
 };
 
