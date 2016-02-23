@@ -132,7 +132,19 @@ float Shape::getGridRightCenterY(){
 }
 
 
+/*-------------------------
+    A Right Triangle
+ -------------------------*/
+
 RightTriangle::RightTriangle(float tlx, float tly, float sz, short an) : Shape(tlx, tly, sz), angle(an){
+}
+
+void RightTriangle::setAngle( HypotenuseAngle hypotenuse_angle ){
+    this->hypotenuseAngle = hypotenuse_angle;
+}
+
+HypotenuseAngle RightTriangle :: getAngle () {
+    return this->hypotenuseAngle;
 }
 
 void RightTriangle::draw (){
@@ -152,13 +164,18 @@ void RightTriangle::draw (){
             ofTriangle( this->getGridTopRightX(), this->getGridTopRightY(), this->getGridBottomRightX(), this->getGridBottomRightY(), this->getGridBottomLeftX(), this->getGridBottomLeftY() );
             break;
 
-        case (4): //
+        case (4): // Northeast Hypotenuse
             ofTriangle( this->getGridBottomRightX(), this->getGridBottomRightY(), this->getGridBottomLeftX(), this->getGridBottomLeftY(), this->getGridTopLeftX(), this->getGridTopLeftY() );
             break;
             
     }
 }
 
+
+
+/*-------------------------
+ A Cirlce
+ -------------------------*/
 Circle::Circle(float tlx, float tly, float sz) : Shape(tlx, tly, sz)
 {}
 
@@ -168,13 +185,17 @@ void Circle::draw (float r)
     ofCircle (this->getGridCenterX(), this->getGridCenterY(), r);
 }
 
+
+/*-------------------------
+ An Isoceles Triangle
+ -------------------------*/
 IsoTriangle::IsoTriangle(float tlx, float tly, float sz) : Shape(tlx, tly, sz)
 {}
 
 // Draw an Isoceles (sp?) triangle
 void IsoTriangle::draw()
 {
-    // Currently this way for testing
+    // Currently this lazily made for testing
     ofTriangle( this->getGridBottomLeftX(), this->getGridTopLeftY(),
                this->getGridTopCenterX(), this->getGridTopCenterY(),
                this->getGridBottomRightX(), this->getGridBottomRightY()

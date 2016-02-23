@@ -15,6 +15,7 @@
 
 using namespace std;
 
+enum HypotenuseAngle { SOUTHEAST, SOUTHWEST, NORTHWEST, NORTHEAST };
 
 class Shape
 {
@@ -67,24 +68,38 @@ public:
     
 };
 
-// A Right Triangle
+/*-------------------------
+    A Right Triangle
+--------------------------*/
+
 class RightTriangle : public Shape
 {
 public:
     RightTriangle(float tlx, float tly, float sz, short an);
-    short angle;
+    short angle; // In the process of refactoring, will remove when HypotenuseAngle situation is figured out
+    
+    HypotenuseAngle hypotenuseAngle;
+    void setAngle( HypotenuseAngle hypotenuse_angle );
+    HypotenuseAngle getAngle();
     void draw();
 };
 
-// A Circle!
-class Circle : public Shape
+/*-------------------------
+     A Circle!
+-------------------------*/
+
+ class Circle : public Shape
 {
 public:
     Circle(float tlx, float tly, float sz);
     void draw (float r);
 };
 
-// An Isoceles Triangle
+
+/*-------------------------
+   An Isoceles Triangle
+-------------------------*/
+
 class IsoTriangle : public Shape
 {
 public:
