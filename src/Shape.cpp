@@ -6,8 +6,8 @@
 //
 //
 
-#include "Shape.h"
 #include <string>
+#include "Shape.h"
 #include "ofVec2f.h"
 #include "ofMain.h"
 
@@ -172,6 +172,40 @@ void RightTriangle::draw (){
 }
 
 
+void RightTriangle::drawSouthEastHypotenuseRightTriangle(){
+    ofTriangle(
+        this->getGridBottomLeftX(), this->getGridBottomLeftY(),
+        this->getGridTopLeftX(), this->getGridTopLeftY(),
+        this->getGridTopRightX(), this->getGridTopRightY()
+   );
+}
+
+void RightTriangle::drawSouthWestHypotenuseRightTriangle(){
+    ofTriangle(
+       this->getGridTopLeftX(), this->getGridTopLeftY(),
+       this->getGridBottomRightX(), this->getGridBottomRightY(),
+       this->getGridTopRightX(), this->getGridTopRightY()
+   );
+
+}
+
+void RightTriangle::drawNorthWestHypotenuseRightTriangle(){
+    ofTriangle(
+       this->getGridTopRightX(), this->getGridTopRightY(),
+       this->getGridBottomRightX(), this->getGridBottomRightY(),
+       this->getGridBottomLeftX(), this->getGridBottomLeftY()
+    );
+
+}
+
+void RightTriangle::drawNorthEastHypotenuseRightTriangle(){
+   ofTriangle(
+       this->getGridBottomRightX(), this->getGridBottomRightY(),
+       this->getGridBottomLeftX(), this->getGridBottomLeftY(),
+       this->getGridTopLeftX(), this->getGridTopLeftY()
+   );
+
+}
 
 /*-------------------------
  A Cirlce

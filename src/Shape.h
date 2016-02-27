@@ -74,6 +74,10 @@ public:
 
 class RightTriangle : public Shape
 {
+    void drawSouthEastHypotenuseRightTriangle();
+    void drawSouthWestHypotenuseRightTriangle();
+    void drawNorthWestHypotenuseRightTriangle();
+    void drawNorthEastHypotenuseRightTriangle();
 public:
     RightTriangle(float tlx, float tly, float sz, short an);
     short angle; // In the process of refactoring, will remove when HypotenuseAngle situation is figured out
